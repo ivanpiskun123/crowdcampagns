@@ -19,7 +19,8 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
 
-    <%= link_to 'Log in', new_user_session_path, class: ["nav-link active"] %>
+    <%= link_to 'Sign in', new_user_session_path, class: ["nav-link active"] %>
+    <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path, class: ["nav-link active"] %>
 
     <%= link_to 'Sign up', new_user_registration_path, class: ["nav-link active"] %>
 
