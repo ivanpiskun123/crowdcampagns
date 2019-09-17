@@ -10,6 +10,17 @@ class User < ApplicationRecord
   has_many :comments
 
   def self.new_with_session(params, session)
+
+    puts ''
+    puts ''
+    puts ''
+    puts ''
+    print "33333333333333333333333333333333333333333333333"
+    puts ''
+    puts ''
+    puts ''
+    puts ''
+
     super.tap do |user|
       if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
         user.email = data["email"] if user.email.blank?
@@ -18,6 +29,17 @@ class User < ApplicationRecord
   end
 
   def self.from_omniauth(auth)
+
+    puts ''
+    puts ''
+    puts ''
+    puts ''
+    print "333333333333333333333333333333333333"
+    puts ''
+    puts ''
+    puts ''
+    puts ''
+
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.email = auth.info.email
       user.password = Devise.friendly_token[0,20]
