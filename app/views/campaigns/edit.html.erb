@@ -1,0 +1,16 @@
+<div class="container">
+    <h2>Edit campaign</h2>
+  <br>
+  <%= form_for @campaign do |f|%>
+
+    <%= f.label :title %><br>
+    <%= f.text_field :title %><br>
+
+
+    <%= f.label :sketch %><br>
+    <%= f.text_area :sketch %><br>
+    <br>
+    <%= f.submit%>
+  <% end %>
+
+</div>

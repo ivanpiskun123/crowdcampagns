@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Crowdfund</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <% if user_signed_in? %>
+      <%= render 'signed_for_template' %>
+    <% else %>
+      <%= render 'unsigned_for_template' %>
+    <% end %>
+
+
+
+
+      <div class="container">
+           <p class="notice"><%= notice %></p>
+           <p class="alert"><%= alert %></p>
+      <%= yield %>
+    </div>
+  </body>
+</html>

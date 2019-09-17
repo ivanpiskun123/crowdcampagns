@@ -1,0 +1,17 @@
+<div class="container">
+
+  <h2>New campaign</h2>
+  <br>
+  <%= form_for @campaign do |f|%>
+  <p class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+  <p class="form-group">
+    <%= f.label :sketch %>
+    <%= f.text_area :sketch %>
+  </p>
+    <%= f.submit%>
+  <% end %>
+
+</div>

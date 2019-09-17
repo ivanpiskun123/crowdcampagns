@@ -1,0 +1,27 @@
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+
+        <li>
+          <%= link_to 'News', root_path, class: [" nav-link"] %>
+        </li>
+        <li>
+          <%= link_to 'Top rated campaigns', top_rated_campaigns_path, class: ["nav-link"] %>
+        </li>
+        <li>
+          <%= link_to 'All campaigns', all_campaign_path, class: ["nav-link"] %>
+        </li>
+      </ul>
+
+      <form class="form-inline my-2 my-lg-2">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+
+    <%= link_to 'Log in', new_user_session_path, class: ["nav-link active"] %>
+
+    <%= link_to 'Sign up', new_user_registration_path, class: ["nav-link active"] %>
+
+  </div>
+</nav>

@@ -1,0 +1,12 @@
+<div class="container card" style="width: 40rem;" >
+  <div class="card-body">
+    <h3 class="card-title">
+      <%= @campaign.title %>
+    </h3>
+    <p class="card-text">
+      <%= @campaign.sketch %>
+    </p>
+    <%= link_to 'Edit', edit_campaign_path(@campaign) %>
+    <%= link_to 'Delete', campaign_path(@campaign) , method: :delete %>
+  </div>
+</div>
