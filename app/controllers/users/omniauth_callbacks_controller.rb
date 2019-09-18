@@ -6,7 +6,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     puts ''
     puts ''
     puts ''
-    print "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    print "AFTER FROM_OMNIAUTH AFTER FROM_OMNIAUTH AFTER FROM_OMNIAUTH"
     puts ''
     print request.env["omniauth.auth"]
     puts ''
@@ -38,7 +38,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     puts ''
     puts ''
     puts ''
-    print "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    print "FAILTURE FAILTURE FAILTURE"
     puts ''
     print request.env["omniauth.auth"]
     puts ''

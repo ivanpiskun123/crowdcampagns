@@ -14,7 +14,7 @@ class User < ApplicationRecord
     puts ''
     puts ''
     puts ''
-    print "33333333333333333333333333333333333333333333333"
+    print "IN NEW WITH SESSION IN NEW WITH SESSION IN NEW WITH SESSION"
     puts ''
     puts ''
     puts ''
@@ -33,7 +33,7 @@ class User < ApplicationRecord
     puts ''
     puts ''
     puts ''
-    print "333333333333333333333333333333333333"
+    print "IN FROM_OMNIAUTH IN FROM_OMNIAUTH IN FROM_OMNIAUTH"
     puts ''
     puts ''
     puts ''
