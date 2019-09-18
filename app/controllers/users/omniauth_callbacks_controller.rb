@@ -34,6 +34,16 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def failure
+    puts ''
+    puts ''
+    puts ''
+    puts ''
+    print "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    puts ''
+    print request.env["omniauth.auth"]
+    puts ''
+    puts ''
+    puts ''
     redirect_to root_path
   end
 end
