@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'users/auth/facebook/callback', to: 'sessions#create'
+
 
 
   devise_for :users, controllers: { registrations: 'users/registrations',

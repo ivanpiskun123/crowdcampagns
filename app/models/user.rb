@@ -6,8 +6,7 @@ class User < ApplicationRecord
          :confirmable, :lockable, :timeoutable, :trackable,
          :omniauthable, :omniauth_providers => [:facebook]
 
-  has_many :campaigns, dependent: :destroy
-  has_many :comments
+
 
   def self.new_with_session(params, session)
 
@@ -46,6 +45,7 @@ class User < ApplicationRecord
       user.name = auth.info.name   # assuming the user model has a name
     end
   end
-
+  has_many :campaigns, dependent: :destroy
+  has_many :comments
 
 end
