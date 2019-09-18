@@ -21,6 +21,8 @@ class User < ApplicationRecord
     puts ''
 
     super.tap do |user|
+      # if extra information was provided by facebook when user logged in, assign whatever comes in
+      # session["devise.facebook_data"]["extra"]["raw_info"] to 'data' variable
       if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
         user.email = data["email"] if user.email.blank?
       end

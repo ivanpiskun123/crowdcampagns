@@ -27,9 +27,31 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       sign_in_and_redirect @user, :event => :authentication
       set_flash_message(:notice, :success, :kind => "Facebook") if is_navigational_format?
     else
+      puts ''
+      puts ''
+      puts ''
+      puts ''
+      print "ELSE PERSISTED ELSE PERSISTED ELSE PERSISTED ELSE PERSISTED "
+      puts ''
+      puts ''
+      puts ''
+      puts ''
+
 
       session["devise.facebook_data"] = request.env["omniauth.auth"]
       redirect_to new_user_registration_url
+
+      puts ''
+      puts ''
+      puts ''
+      puts ''
+      print "HERE HERE HERE HERE HERE"
+      puts ''
+      puts ''
+      puts ''
+      puts ''
+
+
     end
   end
 
