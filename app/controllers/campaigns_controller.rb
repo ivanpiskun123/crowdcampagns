@@ -3,15 +3,6 @@ class CampaignsController < ApplicationController
   before_action :find_campaign, only: [:edit,:show,:update, :destroy]
 
   def index
-    puts ''
-    puts ''
-    puts ''
-    puts ''
-    print "7777777777777777777777777777777777777777777777777777777"
-    puts ''
-    puts ''
-    puts ''
-    puts ''
     @campaigns = Campaign.all.order("created_at DESC")
   end
 

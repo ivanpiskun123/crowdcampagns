@@ -3,6 +3,23 @@
 class Users::SessionsController < Devise::SessionsController
   # before_action :configure_sign_in_params, only: [:create]
 
+  def create
+    puts ' '
+    puts ' '
+    puts ' '
+    puts ' '
+    puts ' '
+    puts 'dfdfdfdfdfdfdfdfdfdfdfdfdfdfdf '
+    puts ' '
+    puts ' '
+    user = User.from_omniauth(request.env["omniauth.auth"])
+    session[:user_id] = user.id
+    redirect_to root_url
+
+
+  end
+
+
   # GET /resource/sign_in
   # def new
   #   super
