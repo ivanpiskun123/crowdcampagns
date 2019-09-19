@@ -5,6 +5,9 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     puts ''
     puts ''
     puts ''
+    puts @user.inspect
+    puts ''
+    puts ''
     puts ''
     print "AFTER FROM_OMNIAUTH AFTER FROM_OMNIAUTH AFTER FROM_OMNIAUTH"
     puts ''
