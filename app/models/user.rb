@@ -45,16 +45,8 @@ class User < ApplicationRecord
       user.email = auth.info.email
       user.password = Devise.friendly_token[0,20]
       user.name = auth.info.name   # assuming the user model has a name
+      user.confirmed_at = Time.now
     end
-    puts ''
-    puts ''
-    puts ''
-    puts user
-    puts ''
-    puts ''
-    puts ''
-    user.confirmed_at = user.created_at
-    return user
 
 
   end
