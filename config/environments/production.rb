@@ -14,7 +14,7 @@ Rails.application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
-  config.action_mailer.default_url_options = { host: 'https://crowdfundappl.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'https://crowdfundex.herokuapp.com' }
 
   ActionMailer::Base.smtp_settings = {
     :user_name => ENV["GMAIL_SENDER_USER_NAME"],
