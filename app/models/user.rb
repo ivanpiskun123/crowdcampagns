@@ -46,8 +46,16 @@ class User < ApplicationRecord
       user.password = Devise.friendly_token[0,20]
       user.name = auth.info.name   # assuming the user model has a name
     end
-
+    puts ''
+    puts ''
+    puts ''
+    puts user
+    puts ''
+    puts ''
+    puts ''
     user.confirmed_at = user.created_at
+    return user
+
 
   end
   has_many :campaigns, dependent: :destroy
