@@ -27,7 +27,8 @@
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
-      <%= current_user.name if current_user.provider %>
+      <%= current_user.name %>
+      <%= current_user.provider ||= " "%>
       <%= link_to 'Log out', destroy_user_session_path, :method => "delete" ,class: ["nav-link active"] %>
       </div>
   </nav>

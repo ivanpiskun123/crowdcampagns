@@ -1,4 +1,26 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
+  def github
+    @user = User.from_omniauth(request.env["omniauth.auth"])
+
+    puts ''
+    puts ''
+    puts ''
+    puts @user.inspect
+    puts ''
+    puts ''
+    puts ''
+    print "AFTER FROM_OMNIAUTH GITHUB"
+    puts ''
+    print request.env["omniauth.auth"]
+    puts ''
+    puts ''
+    puts ''
+
+  end
+
+
+
+
   def facebook
     @user = User.from_omniauth(request.env["omniauth.auth"])
 
